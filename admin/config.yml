@@ -1,0 +1,133 @@
+# Phoenix Forge editor (Decap CMS).
+# GitHub repository the editor saves to.
+backend:
+  name: github
+  repo: Jmckinsey/phoenix-forge
+  branch: main
+  commit_messages:
+    update: "Update {{collection}}"
+
+site_url: /
+display_url: /
+media_folder: images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: journal
+    label: Journal
+    editor: { preview: false }
+    files:
+      - name: posts
+        label: Journal posts
+        file: data/posts.json
+        format: json
+        fields:
+          - label: Posts
+            name: posts
+            label_singular: post
+            widget: list
+            add_to_top: true
+            summary: "{{fields.date}} · {{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, hint: "Click Now for today." }
+              - label: Tag
+                name: tag
+                widget: select
+                required: false
+                options: ["In progress", "Finished", "Shop", "Show", "Example"]
+              - label: Related knife
+                name: knife
+                widget: relation
+                required: false
+                collection: knives
+                file: knives
+                search_fields: ["knives.*.name"]
+                display_fields: ["knives.*.name"]
+                value_field: "knives.*.name"
+              - &photos
+                label: Photos
+                name: photos
+                widget: list
+                required: false
+                summary: "{{fields.caption}}"
+                hint: "First photo is the cover. Drag to reorder."
+                fields:
+                  - { label: Photo, name: src, widget: image }
+                  - { label: Caption, name: caption, widget: string, required: false }
+              - { label: Text, name: body, widget: text, hint: "Leave a blank line between paragraphs." }
+              - { label: Example post, name: example, widget: hidden, required: false, default: false }
+
+  - name: knives
+    label: Knives
+    editor: { preview: false }
+    files:
+      - name: knives
+        label: Knife gallery
+        file: data/knives.json
+        format: json
+        fields:
+          - label: Knives
+            name: knives
+            label_singular: knife
+            widget: list
+            summary: "{{fields.name}}"
+            hint: "Drag to change the order on the site."
+            fields:
+              - { label: Name, name: name, widget: string, hint: "Renaming a knife changes its page address and QR code." }
+              - label: Type
+                name: type
+                widget: string
+                hint: "Used for the filter buttons, e.g. Kitchen, Outdoor, EDC."
+              - label: Outline shown until photos are added
+                name: shape
+                widget: select
+                default: chef
+                options: [chef, hunter, bowie, nakiri, paring, skinner]
+              - *photos
+              - { label: Summary, name: summary, widget: text, required: false, hint: "One or two sentences under the name." }
+              - label: Specs
+                name: specs
+                widget: object
+                collapsed: true
+                fields:
+                  - { label: Overall length, name: overall, widget: string, required: false }
+                  - { label: Blade length, name: blade, widget: string, required: false }
+                  - { label: Steel, name: steel, widget: string, required: false }
+                  - { label: Hardness, name: hardness, widget: string, required: false }
+                  - { label: Grind, name: grind, widget: string, required: false }
+                  - { label: Finish, name: finish, widget: string, required: false }
+                  - { label: Handle, name: handle, widget: string, required: false }
+                  - { label: Guard / bolster, name: guard, widget: string, required: false }
+                  - { label: Sheath, name: sheath, widget: string, required: false }
+                  - { label: Weight, name: weight, widget: string, required: false }
+                  - { label: Year made, name: year, widget: string, required: false }
+              - { label: The story, name: story, widget: text, required: false, hint: "Leave a blank line between paragraphs." }
+              - label: How it was made
+                name: build
+                label_singular: step
+                widget: list
+                required: false
+                summary: "{{fields.step}}"
+                fields:
+                  - { label: Step, name: step, widget: string }
+                  - { label: What happened, name: text, widget: text }
+              - label: Details worth noticing
+                name: details
+                label_singular: detail
+                widget: list
+                required: false
+                field: { label: Detail, name: text, widget: string }
+
+  - name: settings
+    label: Site settings
+    editor: { preview: false }
+    files:
+      - name: site
+        label: Site settings
+        file: data/site.json
+        format: json
+        fields:
+          - { label: About the maker, name: about, widget: text, hint: "Leave a blank line between paragraphs." }
+          - { label: Show setup hints, name: showHints, widget: boolean, default: true, hint: "Turn off once real content is in. Hides gray hint boxes and the example post." }
+          - { label: Site web address, name: siteUrl, widget: string, required: false, hint: "Only needed after moving to a custom domain, e.g. https://phoenixforge.com/ (used for QR codes)." }

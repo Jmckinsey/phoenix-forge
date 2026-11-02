@@ -1,0 +1,142 @@
+{
+  "knives": [
+    {
+      "name": "Chef's Knife No. 1",
+      "type": "Kitchen",
+      "shape": "chef",
+      "photos": [],
+      "summary": "",
+      "specs": {
+        "overall": "",
+        "blade": "",
+        "steel": "",
+        "hardness": "",
+        "grind": "",
+        "finish": "",
+        "handle": "",
+        "guard": "",
+        "sheath": "",
+        "weight": "",
+        "year": ""
+      },
+      "story": "",
+      "build": [],
+      "details": []
+    },
+    {
+      "name": "Drop-Point Hunter",
+      "type": "Outdoor",
+      "shape": "hunter",
+      "photos": [],
+      "summary": "",
+      "specs": {
+        "overall": "",
+        "blade": "",
+        "steel": "",
+        "hardness": "",
+        "grind": "",
+        "finish": "",
+        "handle": "",
+        "guard": "",
+        "sheath": "",
+        "weight": "",
+        "year": ""
+      },
+      "story": "",
+      "build": [],
+      "details": []
+    },
+    {
+      "name": "Bowie",
+      "type": "Outdoor",
+      "shape": "bowie",
+      "photos": [],
+      "summary": "",
+      "specs": {
+        "overall": "",
+        "blade": "",
+        "steel": "",
+        "hardness": "",
+        "grind": "",
+        "finish": "",
+        "handle": "",
+        "guard": "",
+        "sheath": "",
+        "weight": "",
+        "year": ""
+      },
+      "story": "",
+      "build": [],
+      "details": []
+    },
+    {
+      "name": "Nakiri",
+      "type": "Kitchen",
+      "shape": "nakiri",
+      "photos": [],
+      "summary": "",
+      "specs": {
+        "overall": "",
+        "blade": "",
+        "steel": "",
+        "hardness": "",
+        "grind": "",
+        "finish": "",
+        "handle": "",
+        "guard": "",
+        "sheath": "",
+        "weight": "",
+        "year": ""
+      },
+      "story": "",
+      "build": [],
+      "details": []
+    },
+    {
+      "name": "Paring Knife",
+      "type": "Kitchen",
+      "shape": "paring",
+      "photos": [],
+      "summary": "",
+      "specs": {
+        "overall": "",
+        "blade": "",
+        "steel": "",
+        "hardness": "",
+        "grind": "",
+        "finish": "",
+        "handle": "",
+        "guard": "",
+        "sheath": "",
+        "weight": "",
+        "year": ""
+      },
+      "story": "",
+      "build": [],
+      "details": []
+    },
+    {
+      "name": "Skinner",
+      "type": "Outdoor",
+      "shape": "skinner",
+      "photos": [],
+      "summary": "",
+      "specs": {
+        "overall": "",
+        "blade": "",
+        "steel": "",
+        "hardness": "",
+        "grind": "",
+        "finish": "",
+        "handle": "",
+        "guard": "",
+        "sheath": "",
+        "weight": "",
+        "year": ""
+      },
+      "story": "",
+      "build": [],
+      "details": []
+    }
+  ]
+}
