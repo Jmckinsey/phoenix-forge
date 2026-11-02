@@ -29,111 +29,118 @@ media_folder: images/uploads
 public_folder: /images/uploads
 
 collections:
-  - name: journal
-    label: Journal
-    editor: { preview: false }
-    files:
-      - name: posts
-        label: Journal posts
-        file: data/posts.json
-        format: json
-        fields:
-          - label: Posts
-            name: posts
-            label_singular: post
-            widget: list
-            add_to_top: true
-            summary: "{{fields.date}} · {{fields.title}}"
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, hint: "Click Now for today." }
-              - label: Tag
-                name: tag
-                widget: select
-                required: false
-                options: ["In progress", "Finished", "Shop", "Show", "Example"]
-              - label: Related knife
-                name: knife
-                widget: relation
-                required: false
-                collection: knives
-                file: knives
-                search_fields: ["knives.*.name"]
-                display_fields: ["knives.*.name"]
-                value_field: "knives.*.name"
-              - &photos
-                label: Photos
-                name: photos
-                widget: list
-                required: false
-                summary: "{{fields.caption}}"
-                hint: "First photo is the cover. Drag to reorder."
-                fields:
-                  - { label: Photo, name: src, widget: image }
-                  - { label: Caption, name: caption, widget: string, required: false }
-              - { label: Text, name: body, widget: text, hint: "Leave a blank line between paragraphs." }
-              - { label: Example post, name: example, widget: hidden, required: false, default: false }
-
   - name: knives
     label: Knives
+    label_singular: Knife
+    description: "Each knife gets its own page and QR code on the site. Click + Knife to add one."
+    folder: content/knives
+    extension: json
+    format: json
+    create: true
+    delete: true
+    identifier_field: name
+    slug: "{{slug}}"
+    summary: "{{name}} · {{type}}"
+    sortable_fields: ["name", "date", "order"]
     editor: { preview: false }
-    files:
-      - name: knives
-        label: Knife gallery
-        file: data/knives.json
-        format: json
+    fields:
+      - { label: Name, name: name, widget: string, hint: "Renaming a knife changes its page address and QR code." }
+      - { label: Type, name: type, widget: string, required: false, hint: "Used for the filter buttons, e.g. Kitchen, Outdoor, EDC." }
+      - &photos
+        label: Photos
+        name: photos
+        widget: list
+        required: false
+        summary: "{{fields.caption}}"
+        hint: "First photo is the cover. Drag to reorder."
         fields:
-          - label: Knives
-            name: knives
-            label_singular: knife
-            widget: list
-            summary: "{{fields.name}}"
-            hint: "Drag to change the order on the site."
-            fields:
-              - { label: Name, name: name, widget: string, hint: "Renaming a knife changes its page address and QR code." }
-              - label: Type
-                name: type
-                widget: string
-                hint: "Used for the filter buttons, e.g. Kitchen, Outdoor, EDC."
-              - label: Outline shown until photos are added
-                name: shape
-                widget: select
-                default: chef
-                options: [chef, hunter, bowie, nakiri, paring, skinner]
-              - *photos
-              - { label: Summary, name: summary, widget: text, required: false, hint: "One or two sentences under the name." }
-              - label: Specs
-                name: specs
-                widget: object
-                collapsed: true
-                fields:
-                  - { label: Overall length, name: overall, widget: string, required: false }
-                  - { label: Blade length, name: blade, widget: string, required: false }
-                  - { label: Steel, name: steel, widget: string, required: false }
-                  - { label: Hardness, name: hardness, widget: string, required: false }
-                  - { label: Grind, name: grind, widget: string, required: false }
-                  - { label: Finish, name: finish, widget: string, required: false }
-                  - { label: Handle, name: handle, widget: string, required: false }
-                  - { label: Guard / bolster, name: guard, widget: string, required: false }
-                  - { label: Sheath, name: sheath, widget: string, required: false }
-                  - { label: Weight, name: weight, widget: string, required: false }
-                  - { label: Year made, name: year, widget: string, required: false }
-              - { label: The story, name: story, widget: text, required: false, hint: "Leave a blank line between paragraphs." }
-              - label: How it was made
-                name: build
-                label_singular: step
-                widget: list
-                required: false
-                summary: "{{fields.step}}"
-                fields:
-                  - { label: Step, name: step, widget: string }
-                  - { label: What happened, name: text, widget: text }
-              - label: Details worth noticing
-                name: details
-                label_singular: detail
-                widget: list
-                required: false
-                field: { label: Detail, name: text, widget: string }
+          - { label: Photo, name: src, widget: image }
+          - { label: Caption, name: caption, widget: string, required: false }
+      - { label: Summary, name: summary, widget: text, required: false, hint: "One or two sentences shown under the name." }
+      - label: Specs
+        name: specs
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+          - { label: Overall length, name: overall, widget: string, required: false }
+          - { label: Blade length, name: blade, widget: string, required: false }
+          - { label: Steel, name: steel, widget: string, required: false }
+          - { label: Hardness, name: hardness, widget: string, required: false }
+          - { label: Grind, name: grind, widget: string, required: false }
+          - { label: Finish, name: finish, widget: string, required: false }
+          - { label: Handle, name: handle, widget: string, required: false }
+          - { label: Guard / bolster, name: guard, widget: string, required: false }
+          - { label: Sheath, name: sheath, widget: string, required: false }
+          - { label: Weight, name: weight, widget: string, required: false }
+          - { label: Year made, name: year, widget: string, required: false }
+      - { label: The story, name: story, widget: text, required: false, hint: "Who it was for, what inspired it. Leave a blank line between paragraphs." }
+      - label: How it was made
+        name: build
+        label_singular: step
+        widget: list
+        required: false
+        summary: "{{fields.step}}"
+        fields:
+          - { label: Step, name: step, widget: string }
+          - { label: What happened, name: text, widget: text }
+      - label: Details worth noticing
+        name: details
+        label_singular: detail
+        widget: list
+        required: false
+        field: { label: Detail, name: text, widget: string }
+      - { label: Date added, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: false, hint: "Click Now for today. Newest knives show first." }
+      - { label: Display order, name: order, widget: number, value_type: int, required: false, hint: "Optional. Lower numbers show first (1, 2, 3...). Leave blank to show newest first." }
+      - label: Outline shown until photos are added
+        name: shape
+        widget: select
+        required: false
+        default: chef
+        options: [chef, hunter, bowie, nakiri, paring, skinner]
+
+  - name: journal
+    label: Journal
+    label_singular: Journal post
+    description: "Workshop updates. Click + Journal post to write one."
+    folder: content/posts
+    extension: json
+    format: json
+    create: true
+    delete: true
+    identifier_field: title
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{date}} · {{title}}"
+    sortable_fields: ["date", "title"]
+    editor: { preview: false }
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, hint: "Click Now for today." }
+      - label: Tag
+        name: tag
+        widget: select
+        required: false
+        options: ["In progress", "Finished", "Shop", "Show", "Example"]
+      - label: Related knife
+        name: knife
+        widget: relation
+        required: false
+        collection: knives
+        search_fields: ["name"]
+        display_fields: ["name"]
+        value_field: "name"
+      - &photos2
+        label: Photos
+        name: photos
+        widget: list
+        required: false
+        summary: "{{fields.caption}}"
+        hint: "First photo is the cover. Drag to reorder."
+        fields:
+          - { label: Photo, name: src, widget: image }
+          - { label: Caption, name: caption, widget: string, required: false }
+      - { label: Text, name: body, widget: text, hint: "Leave a blank line between paragraphs." }
+      - { label: Example post, name: example, widget: hidden, required: false, default: false }
 
   - name: settings
     label: Site settings
