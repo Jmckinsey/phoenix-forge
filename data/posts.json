@@ -1,6 +1,18 @@
 {
   "posts": [
     {
+      "example": false,
+      "title": "Love you dad, happy Birthday",
+      "date": "2026-11-02",
+      "tag": "Example",
+      "photos": [
+        {
+          "src": "/images/uploads/screenshot-2026-11-02-092059.png"
+        }
+      ],
+      "body": "Love you dad, happy Birthday"
+    },
+    {
       "example": true,
       "title": "Example post: how a journal entry looks",
       "date": "2026-11-02",
