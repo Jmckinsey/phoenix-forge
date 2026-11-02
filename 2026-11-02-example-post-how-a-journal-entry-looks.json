@@ -1,0 +1,9 @@
+{
+  "example": true,
+  "title": "Example post: how a journal entry looks",
+  "date": "2026-11-02",
+  "tag": "Example",
+  "knife": "Bowie",
+  "photos": [],
+  "body": "This is a sample entry so you can see the layout. It disappears from the site once \"Show setup hints\" is turned off in Site settings, or you can delete it.\n\nWrite each update like a short note to a friend: what's on the bench, what went right, what didn't. A few paragraphs and a couple of photos is plenty.\n\nPick a knife in the \"Related knife\" box and the post shows up as a link here and on that knife's page."
+}
