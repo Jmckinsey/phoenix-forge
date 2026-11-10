@@ -1,0 +1,32 @@
+{
+  "title": "From the shop: recent work",
+  "date": "2026-11-10",
+  "tag": "Shop",
+  "photos": [
+    {
+      "src": "/images/knives/shop-1.jpg",
+      "caption": "Kitchen knives on the magnetic block"
+    },
+    {
+      "src": "/images/knives/shop-2.jpg",
+      "caption": "Two fighters and a tooled leather sheath"
+    },
+    {
+      "src": "/images/knives/shop-3.jpg",
+      "caption": "A pair of hunters"
+    },
+    {
+      "src": "/images/knives/shop-4.jpg",
+      "caption": "Two bowies"
+    },
+    {
+      "src": "/images/knives/shop-5.jpg",
+      "caption": "Three new kitchen and utility knives"
+    },
+    {
+      "src": "/images/knives/shop-6.jpg",
+      "caption": "Blades waiting for handles"
+    }
+  ],
+  "body": "A look around the Phoenix Forge shop: finished kitchen knives, hunters and bowies, and a row of blades still waiting for their handles."
+}
