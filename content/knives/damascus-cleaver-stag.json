@@ -1,0 +1,23 @@
+{
+  "name": "Damascus Cleaver with Stag Handle",
+  "type": "Kitchen",
+  "photos": [
+    {
+      "src": "/images/knives/damascus-cleaver-stag-1.jpg",
+      "caption": ""
+    },
+    {
+      "src": "/images/knives/damascus-cleaver-stag-2.jpg",
+      "caption": ""
+    }
+  ],
+  "summary": "A heavy Damascus cleaver with a stag antler handle and a spacer stack at the bolster.",
+  "specs": {
+    "handle": "Stag antler"
+  },
+  "story": "",
+  "build": [],
+  "details": [],
+  "date": "2026-11-10",
+  "order": 1
+}

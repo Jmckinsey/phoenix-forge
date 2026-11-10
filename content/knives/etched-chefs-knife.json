@@ -1,0 +1,22 @@
+{
+  "name": "Etched Chef's Knife with Sheath",
+  "type": "Kitchen",
+  "photos": [
+    {
+      "src": "/images/knives/etched-chefs-knife-1.jpg",
+      "caption": ""
+    },
+    {
+      "src": "/images/knives/etched-chefs-knife-2.jpg",
+      "caption": ""
+    }
+  ],
+  "summary": "A chef's knife with an etched pattern on the blade and a figured wood handle, with a black sheath.",
+  "specs": {
+    "sheath": "Black saya"
+  },
+  "story": "",
+  "build": [],
+  "details": [],
+  "date": "2026-11-10"
+}

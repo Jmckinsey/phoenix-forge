@@ -1,0 +1,18 @@
+{
+  "name": "Damascus Santoku No. 1",
+  "type": "Kitchen",
+  "photos": [
+    {
+      "src": "/images/knives/damascus-santoku-1-1.jpg",
+      "caption": ""
+    }
+  ],
+  "summary": "A wide Damascus santoku with a dark burl handle and maker's medallion.",
+  "specs": {
+    "handle": "Burl"
+  },
+  "story": "",
+  "build": [],
+  "details": [],
+  "date": "2026-11-10"
+}

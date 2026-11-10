@@ -1,0 +1,18 @@
+{
+  "name": "Fillet Knife with Pearl Handle",
+  "type": "Kitchen",
+  "photos": [
+    {
+      "src": "/images/knives/fillet-knife-pearl-1.jpg",
+      "caption": ""
+    }
+  ],
+  "summary": "A Damascus fillet knife with a pale pearl-style handle and a black sheath.",
+  "specs": {
+    "sheath": "Black saya"
+  },
+  "story": "",
+  "build": [],
+  "details": [],
+  "date": "2026-11-10"
+}

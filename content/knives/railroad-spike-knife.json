@@ -1,0 +1,27 @@
+{
+  "name": "Railroad Spike Knife",
+  "type": "Outdoor",
+  "photos": [
+    {
+      "src": "/images/knives/railroad-spike-knife-1.jpg",
+      "caption": ""
+    },
+    {
+      "src": "/images/knives/railroad-spike-knife-2.jpg",
+      "caption": ""
+    },
+    {
+      "src": "/images/knives/railroad-spike-knife-3.jpg",
+      "caption": ""
+    }
+  ],
+  "summary": "Forged from a railroad spike. The spike's head becomes the pommel and the shank is twisted into the handle.",
+  "specs": {
+    "handle": "Twisted spike (integral)"
+  },
+  "story": "",
+  "build": [],
+  "details": [],
+  "date": "2026-11-10",
+  "order": 2
+}

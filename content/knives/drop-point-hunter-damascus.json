@@ -1,0 +1,18 @@
+{
+  "name": "Drop-Point Hunter",
+  "type": "Outdoor",
+  "photos": [
+    {
+      "src": "/images/knives/drop-point-hunter-damascus-1.jpg",
+      "caption": ""
+    }
+  ],
+  "summary": "A Damascus drop-point hunter with a brass guard and striped wood handle.",
+  "specs": {
+    "guard": "Brass"
+  },
+  "story": "",
+  "build": [],
+  "details": [],
+  "date": "2026-11-10"
+}

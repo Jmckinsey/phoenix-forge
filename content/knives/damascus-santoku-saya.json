@@ -1,0 +1,18 @@
+{
+  "name": "Damascus Santoku with Saya",
+  "type": "Kitchen",
+  "photos": [
+    {
+      "src": "/images/knives/damascus-santoku-saya-1.jpg",
+      "caption": ""
+    }
+  ],
+  "summary": "A Damascus santoku with a wood handle, shown half out of its black sheath.",
+  "specs": {
+    "sheath": "Black saya"
+  },
+  "story": "",
+  "build": [],
+  "details": [],
+  "date": "2026-11-10"
+}

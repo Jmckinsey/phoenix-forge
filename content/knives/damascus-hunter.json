@@ -1,0 +1,18 @@
+{
+  "name": "Damascus Hunter",
+  "type": "Outdoor",
+  "photos": [
+    {
+      "src": "/images/knives/damascus-hunter-1.jpg",
+      "caption": ""
+    }
+  ],
+  "summary": "A Damascus hunting knife with a brass guard and dark wood handle.",
+  "specs": {
+    "guard": "Brass"
+  },
+  "story": "",
+  "build": [],
+  "details": [],
+  "date": "2026-11-10"
+}

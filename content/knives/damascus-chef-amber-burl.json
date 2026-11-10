@@ -1,0 +1,19 @@
+{
+  "name": "Damascus Chef's Knife, Amber Burl",
+  "type": "Kitchen",
+  "photos": [
+    {
+      "src": "/images/knives/damascus-chef-amber-burl-1.jpg",
+      "caption": ""
+    }
+  ],
+  "summary": "A Damascus chef's knife with a bright amber burl handle.",
+  "specs": {
+    "handle": "Burl"
+  },
+  "story": "",
+  "build": [],
+  "details": [],
+  "date": "2026-11-10",
+  "order": 3
+}
