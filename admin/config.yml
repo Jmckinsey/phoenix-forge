@@ -23,10 +23,10 @@ auth:
   avatar_url_claim: avatar_url
 
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
-site_url: https://phoenixforgeknives.netlify.app
-display_url: https://phoenixforgeknives.netlify.app
-media_folder: images/uploads
-public_folder: /images/uploads
+site_url: https://phoenixforgeknives.com
+display_url: https://phoenixforgeknives.com
+media_folder: images
+public_folder: /images
 
 collections:
   - name: knives
